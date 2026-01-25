@@ -13,6 +13,10 @@ This project was developed as part of the **Class XII Computer Science** curricu
 - Python
 - MySQL
 
+## Languages
+- Python
+- SQL (MySQL)
+
 ## How to Run
 1. Ensure MySQL is installed and running
 2. Create the database and table using the schema.sql file.
