@@ -15,28 +15,9 @@ This project was developed as part of the **Class XII Computer Science** curricu
 
 ## How to Run
 1. Ensure MySQL is installed and running
-2. Create the database and table as shown below.
+2. Create the database and table using the schema.sql file.
 3. Install dependency:
    ```bash
    pip install mysql-connector-python
 4. Download the .py file & replace your password with Your_Password.
 5. Run the Python file
-## Database Setup (MySQL)
-
-Create the database and table using the following SQL commands:
-
-```sql
-CREATE DATABASE Employee_Data;
-USE Employee_Data;
-
-CREATE TABLE Employee (
-    EID INT NOT NULL,
-    EJoining_Date DATE NOT NULL,
-    EName VARCHAR(50) NOT NULL,
-    EPhone_Number BIGINT NOT NULL,
-    EDOB DATE NOT NULL,
-    EAddress VARCHAR(200) NOT NULL,
-    EPost VARCHAR(20) NOT NULL,
-    ESalary INT NOT NULL,
-    PRIMARY KEY (EID)
-);
