@@ -23,5 +23,5 @@ This project was developed as part of the **Class XII Computer Science** curricu
 3. Install dependency:
    ```bash
    pip install mysql-connector-python
-4. Download the .py file & replace your password with Your_Password.
+4. Download the .py file & replace (your MySQL server password) with Your_Password.
 5. Run the Python file
