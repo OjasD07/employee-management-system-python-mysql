@@ -19,7 +19,8 @@ This project was developed as part of the **Class XII Computer Science** curricu
 3. Install dependency:
    ```bash
    pip install mysql-connector-python
-4. Run the Python file
+4. Download the .py file & replace your password with Your_Password.
+5. Run the Python file
 ## Database Setup (MySQL)
 
 Create the database and table using the following SQL commands:
