@@ -16,6 +16,7 @@ This project was developed as part of the **Class XII Computer Science** curricu
 ## How to Run
 1. Ensure MySQL is installed and running
 2. Create the database and table as shown in the project code
+______________________________________________________________
    mysql> create database Employee_Data;
    mysql> use Employee_Data;
    mysql> Create table Employee(
@@ -28,6 +29,8 @@ This project was developed as part of the **Class XII Computer Science** curricu
     -> EPost VARCHAR(20) NOT NULL,
     -> ESalary INT NOT NULL,
     -> PRIMARY KEY (EID));
+______________________________________________________________
+
 3. Install dependency:
    ```bash
    pip install mysql-connector-python
