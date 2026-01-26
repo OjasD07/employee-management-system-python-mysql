@@ -26,5 +26,8 @@ This project was developed as part of the **Class XII Computer Science** curricu
 4. Download the .py file & replace (your MySQL server password) with Your_Password.
 5. Run the Python file
 
+## Author
+Ojas Deshpande
+
 ## Notes
 This repository contains the project in its original academic form.
