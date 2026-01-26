@@ -31,4 +31,4 @@ This repository contains the project in its original academic form.
 
 
 ## Author
-Ojas Deshpande
+Ojas Deshpande [contact.ojasdeshpande@gmail.com]
