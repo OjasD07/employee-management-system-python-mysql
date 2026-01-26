@@ -1,4 +1,3 @@
-
 # Employee Management System, By Ojas Deshpande
 
 from os import system
