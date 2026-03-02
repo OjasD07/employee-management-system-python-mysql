@@ -1,8 +1,7 @@
 # Employee Management System, By Ojas Deshpande
 
-from os import system
 import mysql.connector
-con = mysql.connector.connect(host="localhost", user="root",password="Your_Password", database="Employee_Data")
+connection = mysql.connector.connect(host="localhost", user="root",password="Your_Password", database="Employee_Data")
 
 # Function to Add Employee
 def Add_Employee():
@@ -27,9 +26,9 @@ def Add_Employee():
                                     data = (EID, EJoining_Date, EName, EPhone_Number, EDOB, EAddress, EPost, ESalary)
                                     # Inserting Employee Details into the Employee_Data (Employee) Table
                                     sql = 'insert into Employee values(%s,%s,%s,%s,%s,%s,%s,%s)'
-                                    c = con.cursor()
-                                    c.execute(sql, data)
-                                    con.commit()
+                                    cursor = connection.cursor()
+                                    cursor.execute(sql, data)
+                                    connection.commit()
                                     print("\nSuccessfully Added Employee's Record.")
                                     press = input("\nPress Any Key To Continue.")
                                     menu()
@@ -69,11 +68,11 @@ def Add_Employee():
 # Function to Check if Employee with given EPhone_Number exists
 def check_employee_EPhone_Number(employee_phone_no):
     sql = 'select * from Employee where EPhone_Number = %s'
-    c = con.cursor(buffered=True)
+    cursor = connection.cursor(buffered=True)
     data = (employee_phone_no,)
-    c.execute(sql, data)
-    a = c.rowcount
-    if a == 1:
+    cursor.execute(sql, data)
+    rows = cursor.rowcount
+    if rows == 1:
         return True
     else:
         return False
@@ -81,11 +80,11 @@ def check_employee_EPhone_Number(employee_phone_no):
 # Function to Check if Employee with given EID exists
 def check_employee(employee_id):
     sql = 'select * from Employee where EID = %s'
-    c = con.cursor(buffered=True)
+    cursor = connection.cursor(buffered=True)
     data = (employee_id,)
-    c.execute(sql, data)
-    a = c.rowcount
-    if a == 1:
+    cursor.execute(sql, data)
+    rows = cursor.rowcount
+    if rows == 1:
         return True
     else:
         return False
@@ -95,17 +94,17 @@ def Display_Employee():
     print("\nDisplay Employee's Record--> ")
     # Query to select all rows from Employee_Data (Employee) Table
     sql = 'select * from Employee'
-    c = con.cursor()
-    c.execute(sql)
+    cursor = connection.cursor()
+    cursor.execute(sql)
     # Fetching all details of all the Employees
-    r = c.fetchall ( )
-    a = c. rowcount
-    if a == 0:
+    details = cursor.fetchall ( )
+    rows = cursor.rowcount
+    if rows == 0:
         print("\nEmployee Record does not Exist!")
         press = input("\nPress Any Key To Continue.")
         menu()
     else :
-        for i in r:
+        for i in details:
             print("\nEmployee's Id: ", i[0])
             print("Employee's Joining Date: ", i[1])
             print("Employee's Name: ", i[2])
@@ -132,9 +131,9 @@ def Update_Employee():
                     # Updating Employee details in Employee_Data (Employee) Table
                     sql = 'UPDATE Employee SET EPhone_Number = %s, EAddress = %s WHERE EID = %s'
                     data = (EPhone_Number, EAddress, EID)
-                    c = con.cursor()
-                    c.execute(sql, data)
-                    con.commit()
+                    cursor = connection.cursor()
+                    cursor.execute(sql, data)
+                    connection.commit()
                     print("\nUpdated Employee's Record")
                     press = input("\nPress Any Key To Continue.")
                     menu()
@@ -168,9 +167,9 @@ def Remove_Employee():
         # Query to delete Employee from Employee table
         sql = 'delete from Employee where EID = %s'
         data = (EID,)# Converting it into tuple.
-        c = con.cursor()
-        c.execute(sql, data)
-        con.commit()
+        cursor = connection.cursor()
+        cursor.execute(sql, data)
+        connection.commit()
         print("\nEmployee Removed!")
         press = input("\nPress Any key To Continue.")
         menu()
@@ -184,11 +183,11 @@ def Search_Employee():
     # Query to search Employee from Employee table
         sql = 'select * from Employee where EID = %s'
         data = (EID,)#Converting it into tuple.
-        c = con.cursor()
-        c.execute(sql, data)
+        cursor = connection.cursor()
+        cursor.execute(sql, data)
         # Fetching all details of all the employee
-        r = c.fetchall()
-        for i in r:
+        details = cursor.fetchall()
+        for i in details:
             print("\nEmployee's Id: ", i[0])
             print("Employee's Joining Date: ", i[1])
             print("Employee's Name: ", i[2])
