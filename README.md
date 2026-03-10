@@ -74,5 +74,4 @@ python "Employee Management System.py"
 - This is a console project in its original academic style.
 
 ## Author
-Ojas Deshpande  
-contact.ojasdeshpande@gmail.com
+Ojas Deshpande [contact.ojasdeshpande@gmail.com]
