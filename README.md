@@ -1,3 +1,5 @@
+<a href="https://www.ojasdeshpande.in" target="_blank"><img src="https://raw.githubusercontent.com/OjasD07/OjasD07/main/Logo.svg" alt="Logo" style="float: right; width: 88px; height: 88px; background: #0ea5e9; border-radius: 10px; padding: 8px; margin: 0 0 8px 8px;" /></a>
+
 # Employee Management System (Python + MySQL)
 
 A console-based CRUD application to manage employee records using Python and MySQL.
